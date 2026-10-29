@@ -1,0 +1,17 @@
+{
+  "name": "session-auth-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node --env-file=.env src/server.js",
+    "seed": "node --env-file=.env src/seed.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.3.0",
+    "mongodb": "^7.7.0"
+  }
+}

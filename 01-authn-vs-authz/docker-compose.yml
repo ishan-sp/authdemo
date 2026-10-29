@@ -1,0 +1,17 @@
+# Postgres for concept 01. Runs on host port 5433 so it doesn't clash
+# with any other Postgres you already have on 5432.
+services:
+  postgres:
+    build: ./db
+    container_name: postgres-authn-authz
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: authdemo
+    ports:
+      - "5433:5432"
+    volumes:
+      - authn-authz-data:/var/lib/postgresql/data
+
+volumes:
+  authn-authz-data:

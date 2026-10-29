@@ -1,0 +1,12 @@
+# MongoDB for concept 02. Connect Compass to mongodb://localhost:27017
+services:
+  mongo:
+    image: mongo:7
+    container_name: mongo-session-auth
+    ports:
+      - "27017:27017"
+    volumes:
+      - session-auth-data:/data/db
+
+volumes:
+  session-auth-data:
